@@ -1,0 +1,44 @@
+[
+    {
+        "firstname": "Anup",
+        "lastname": "Dhali",
+        "email": "argha.dhali@delostylestudio.com",
+        "password": "Argha@123", 
+        "confirmpassword": "Argha@123"
+    },
+    {
+        "firstname": "",
+        "lastname": "Dhali",
+        "email": "argha.dhali@delostylestudio.com",
+        "password": "Argha@123", 
+        "confirmpassword": "Argha@123" 
+    },
+    {
+        "firstname": "Anup",
+        "lastname": "",
+        "email": "argha.dhali@delostylestudio.com",
+        "password": "Argha@123", 
+        "confirmpassword": "Argha@123"
+    },
+    {
+        "firstname": "Anup",
+        "lastname": "Dhali",
+        "email": "",
+        "password": "Argha@123", 
+        "confirmpassword": "Argha@123"
+    },
+    {
+        "firstname": "Anup",
+        "lastname": "Dhali",
+        "email": "argha.dhali@delostylestudio.com",
+        "password": "", 
+        "confirmpassword": "Argha@123"
+    },
+    {
+        "firstname": "Anup",
+        "lastname": "Dhali",
+        "email": "argha.dhali@delostylestudio.com",
+        "password": "Argha@123", 
+        "confirmpassword": ""
+    }
+]
