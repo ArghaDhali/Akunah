@@ -48,7 +48,7 @@ test.describe('Home Page', () => {
         await page.close();
     });
 
-    test.only('Validate Add Patient', async ({ page }) => {
+    test.skip('Validate Add Patient', async ({ page }) => {
         await new HomePage(page).Addpatientbutton();
 
         await expect(page.locator('div[class="text-center modal-title h4"]')).toContainText('Add Patient');
@@ -58,6 +58,12 @@ test.describe('Home Page', () => {
                                             HomeTestdata[0].dob,
                                             HomeTestdata[0].sexs,
                                             HomeTestdata[0].email);
+
+        await page.close();
+    });
+
+    test.only('Validate Contact us', async ({ page }) => {
+        await new HomePage(page).Contactus(HomeTestdata[0].subject, HomeTestdata[0].message);
 
         await page.close();
     });

@@ -39,7 +39,7 @@ test.describe('Sign In', () => {
         await page.close();
     });
 
-    test.only('Validate Sign In with wrong password', async ({ page }) => {
+    test('Validate Sign In with wrong password', async ({ page }) => {
 
         await expect(page.locator('h4>b')).toContainText('Sign in to akunah');
 
