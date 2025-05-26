@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import SignInTestdata from "../TestData/LoginTestData.json" assert { type: "json" };
-import SignInPage from '../PageObjects/SignIn.page.spec.js';
-import MyProfilesPage from '../PageObjects/MyProfile.page.spec.js';
+import SignInPage from '../PageObjects/SignIn.page.js';
+import MyProfilesPage from '../PageObjects/MyProfile.page.js';
 import exp from 'constants';
 
 //const MyProfilePage = new MyProfilesPage();

@@ -6,6 +6,8 @@
         "sexs": "Male",
         "email": "argha.dhali@delostylestudio.com",
         "subject": "Movie",
-        "message": "Iron Man"
+        "message": "Iron Man",
+        "taskname": "Test 1",
+        "patientname": "Argha Dhali"
     }
 ]

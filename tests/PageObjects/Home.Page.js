@@ -61,6 +61,16 @@ class HomePage{ //sub page containing specific selectors and methods for a speci
 
         await this.page.click('button[class="btn_outline mr_20"]');
     }
+
+    async Addtask(taskname, patientname){
+        await this.page.click('button[class="btn_outline f_400"]');
+
+        await this.page.fill('input[placeholder="Enter text here..."]', taskname);
+
+        await this.page.fill('input[placeholder="Select"]', patientname);
+
+        await this.page.click('button[fdprocessedid="inbld8"]');
+    }
 }
 
 export default HomePage;

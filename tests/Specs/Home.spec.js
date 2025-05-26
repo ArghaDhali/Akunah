@@ -1,8 +1,8 @@
 import {test, expect} from '@playwright/test';
 import SignInTestdata from "../TestData/LoginTestData.json" assert { type: "json" };
-import SignInPage from '../PageObjects/SignIn.page.spec.js';
-import MyProfilesPage from '../PageObjects/MyProfile.page.spec.js';
-import HomePage from '../PageObjects/Home.Page.spec.js';
+import SignInPage from '../PageObjects/SignIn.page.js';
+import MyProfilesPage from '../PageObjects/MyProfile.page.js';
+import HomePage from '../PageObjects/Home.Page.js';
 import HomeTestdata from '../TestData/HomeTestData.json';
 import exp from 'constants';
 
@@ -48,7 +48,7 @@ test.describe('Home Page', () => {
         await page.close();
     });
 
-    test.skip('Validate Add Patient', async ({ page }) => {
+    test('Validate Add Patient', async ({ page }) => {
         await new HomePage(page).Addpatientbutton();
 
         await expect(page.locator('div[class="text-center modal-title h4"]')).toContainText('Add Patient');
@@ -62,8 +62,14 @@ test.describe('Home Page', () => {
         await page.close();
     });
 
-    test.only('Validate Contact us', async ({ page }) => {
+    test('Validate Contact us', async ({ page }) => {
         await new HomePage(page).Contactus(HomeTestdata[0].subject, HomeTestdata[0].message);
+
+        await page.close();
+    });
+
+    test.only('Validate Add task', async ({ page }) => {
+        await new HomePage(page).Addtask(HomeTestdata[0].taskname, HomeTestdata[0].patientname);
 
         await page.close();
     });

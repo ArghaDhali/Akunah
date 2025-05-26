@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 import RegistrationTestdata from "../TestData/RegistrationTestData.json" assert { type: "json" };
-import RegistrationPage from '../PageObjects/Registration.page.spec.js';
-import SignInPage from '../PageObjects/SignIn.page.spec.js';
+import RegistrationPage from '../PageObjects/Registration.page.js';
+import SignInPage from '../PageObjects/SignIn.page.js';
 import { assert } from 'console';
 
 test.describe('Registration', () => {
