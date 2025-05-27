@@ -45,7 +45,7 @@ class AppointmentPage{
  async dentalcleaningbutton(){
    await this.page.click('//span[text()="Dental Cleaning"]');
  }
- 
+
  /*
  This method is for select the booking date and time
 
@@ -56,9 +56,7 @@ class AppointmentPage{
 
     const timeSlot = this.page.locator('//td/button/span[@class="MuiButton-label"]') //Clicking appointment time
       .filter({ hasText: time });
-    await timeSlot.first().click(); 
-
-    //await this.page.click('//td/button/span[@class="MuiButton-label"]'); //Clicking appointment time
+    await timeSlot.first().click();
  }
 
  /*
