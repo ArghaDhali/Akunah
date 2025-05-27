@@ -1,6 +1,7 @@
 import {test, expect} from '@playwright/test';
 import AppointmentPage from "../PageObjects/Appointment.Page";
 import AppointmentTestdata from "../TestData/AppointmentTestData.json" assert { type: "json" };
+import {MailSlurp } from 'mailslurp-client'
 
 test.describe('Appointment Booking', () => {
 
@@ -20,7 +21,7 @@ test.describe('Appointment Booking', () => {
 
         await new AppointmentPage(page).dentalimplantbutton();
 
-        await new AppointmentPage(page).timetable(AppointmentTestdata[0].date);
+        await new AppointmentPage(page).timetable(AppointmentTestdata[0].date, AppointmentTestdata[0].time);
 
         await new AppointmentPage(page).bookingmyself(AppointmentTestdata[0].firstname,
                                                       AppointmentTestdata[0].lastname,

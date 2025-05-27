@@ -45,15 +45,20 @@ class AppointmentPage{
  async dentalcleaningbutton(){
    await this.page.click('//span[text()="Dental Cleaning"]');
  }
+ 
  /*
  This method is for select the booking date and time
 
  @param date - Date should be passed
  */
- async timetable(date){
+ async timetable(date, time){
     await this.page.fill('input[placeholder="MM/DD/YYYY"]', date) //Entering value into Jump To input field
 
-    await this.page.click('//td/button/span[@class="MuiButton-label"]'); //Clicking appointment time
+    const timeSlot = this.page.locator('//td/button/span[@class="MuiButton-label"]') //Clicking appointment time
+      .filter({ hasText: time });
+    await timeSlot.first().click(); 
+
+    //await this.page.click('//td/button/span[@class="MuiButton-label"]'); //Clicking appointment time
  }
 
  /*
