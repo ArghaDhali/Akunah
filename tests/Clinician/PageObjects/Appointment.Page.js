@@ -1,3 +1,5 @@
+import { expect } from "@playwright/test";
+
 class AppointmentPage{
 
     constructor(page){ //Page Constructor
@@ -97,6 +99,15 @@ class AppointmentPage{
  }
 
  /*
+ This method is for clicking the I don't have Insurance & Next button
+ */
+async donthaveinsurancebutton (){
+  await this.page.click('div[role="group"] button:nth-child(2)'); //Clicking the I don't have Insurance button
+
+  await this.page.click('//span[text()="Next"]'); //Clicking the Next button
+}
+
+ /*
  This method is for clicking the Use Email button
  */
  async useemailbutton(){
@@ -108,6 +119,14 @@ class AppointmentPage{
  */
  async usecellphonebutton(){
    await this.page.click('//span[text()="Use Cell Phone"]');
+ }
+
+ /*
+ This method is for clicking the verify & Schedule button
+ */
+ async verifybutton(){
+  await this.page.click('//span[text()="Verify & Schedule"]');
+  await expect(this.page.locator('//div/h3')).toContainText('Appointment Booked!')
  }
 }
 

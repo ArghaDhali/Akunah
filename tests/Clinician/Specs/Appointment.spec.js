@@ -30,7 +30,7 @@ test.describe('Appointment Booking', () => {
                                                       AppointmentTestdata[0].email,
                                                       AppointmentTestdata[0].messsage);
 
-        await new AppointmentPage(page).insuranceunchangedbutton();
+        await new AppointmentPage(page).donthaveinsurancebutton();
 
         await new AppointmentPage(page).useemailbutton();
 
