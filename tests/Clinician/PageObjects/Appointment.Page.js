@@ -108,10 +108,12 @@ async donthaveinsurancebutton (){
 }
 
  /*
- This method is for clicking the Use Email button
+ This method is for clicking the Use Email button and entering the OTP manually
  */
  async useemailbutton(){
-   await this.page.click('//span[text()="Use Email"]');
+   await this.page.click('//span[text()="Use Email"]'); //Clicking the Use Email button
+
+   console.log('Please enter the OTP manually...');
  }
 
  /*
@@ -125,8 +127,11 @@ async donthaveinsurancebutton (){
  This method is for clicking the verify & Schedule button
  */
  async verifybutton(){
-  await this.page.click('//span[text()="Verify & Schedule"]');
-  await expect(this.page.locator('//div/h3')).toContainText('Appointment Booked!')
+  await this.page.click('//span[text()="Verify & Schedule"]'); //Clicking the Verify & schedule button
+
+  await expect(this.page.locator('div[class="contact-confirmation-info"] div h3')).toContainText('Appointment Booked!'); // Checking the Appointment Booked! hedaing
+
+  console.log('Appointment Booked!');
  }
 }
 

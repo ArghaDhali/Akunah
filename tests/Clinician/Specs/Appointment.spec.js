@@ -17,6 +17,8 @@ test.describe('Appointment Booking', () => {
 
     test('Appointment Booking for new patient', async ({page}) => {
 
+        test.setTimeout(60000);
+
         await new AppointmentPage(page).newpatientbutton();
 
         await new AppointmentPage(page).dentalimplantbutton();
@@ -36,6 +38,9 @@ test.describe('Appointment Booking', () => {
 
         await expect(page.locator("//div[normalize-space()='We have sent a 4-digit code to your Email Address']")).toContainText('We have sent a 4-digit code to your');
 
+        await new AppointmentPage(page).verifybutton();
+
         await page.close();
+
     });
 });
